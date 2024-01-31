@@ -75,7 +75,50 @@ const agregar = (id) => {
   mostrarCarrito()
   };
 
+  function normalize(text) {
+    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+    let search = document.getElementById("search");
+    let botonSearch = document.getElementById("botonSearch");
+    botonSearch.addEventListener("click", () => {
+    event.preventDefault();
+    let resultadoBusqueda = productos.filter((el) =>
+    normalize(el.nombre.toLowerCase()).includes(normalize(search.value.toLowerCase()))
+    );
+    containerProductos.innerHTML = "";
+    containerProductos.classList.add(`row`);
+    containerProductos.style.justifyContent = "center";
+    resultadoBusqueda.forEach((item) => {
+      let divBusqueda = document.createElement("div");
+      divBusqueda.classList.add(`col-lg-4`);
+      divBusqueda.innerHTML = `
+        <div class="card" style="margin-top: 2rem; margin-bottom: 2rem;"> 
+          <img src="${item.imagen}" class="card-img-top" alt="${item.nombre}">
+          <div class="card-body">
+            <h5 class="card-title">${item.nombre}</h5>
+            <p class="card-text">$${item.precio}</p>
+            <p class="card-text">${item.texto}</p>
+            <button type="button" class="btn btn-danger" id="boton${item.id}" >Comprar</button>
+          </div>
+        </div>
+      `;
+      containerProductos.append(divBusqueda);
+    
+    let boton = document.getElementById(`boton${item.id}`);
+    boton.addEventListener("click", () => {
+    agregar(item.id);
+      Swal.fire({
+      text: `Se ha agregado ${item.nombre} al carrito`,
+      icon: "success",
+    });
+    });
+    });
+    let carrouselCategorias = document.getElementById("carouselExampleCaptions");
+    carrouselCategorias.style.display = "none";
+    });
+
 })
+
 .catch(error => console.error('Error al cargar el archivo JSON:', error));
 
 JSON.parse(sessionStorage.getItem("carrito")) === null && sessionStorage.setItem("carrito", JSON.stringify([]));
@@ -168,47 +211,8 @@ containerCarrito.append(divCarrito);
 
 
 
-function normalize(text) {
-return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-}
-let search = document.getElementById("search");
-let botonSearch = document.getElementById("botonSearch");
-botonSearch.addEventListener("click", () => {
-event.preventDefault();
-let resultadoBusqueda = productos.filter((el) =>
-normalize(el.nombre.toLowerCase()).includes(normalize(search.value.toLowerCase()))
-);
-containerProductos.innerHTML = "";
-containerProductos.classList.add(`row`);
-containerProductos.style.justifyContent = "center";
-resultadoBusqueda.forEach((item) => {
-  let divBusqueda = document.createElement("div");
-  divBusqueda.classList.add(`col-lg-4`);
-  divBusqueda.innerHTML = `
-    <div class="card" style="margin-top: 2rem; margin-bottom: 2rem;"> 
-      <img src="${item.imagen}" class="card-img-top" alt="${item.nombre}">
-      <div class="card-body">
-        <h5 class="card-title">${item.nombre}</h5>
-        <p class="card-text">$${item.precio}</p>
-        <p class="card-text">${item.texto}</p>
-        <button type="button" class="btn btn-danger" id="boton${item.id}" >Comprar</button>
-      </div>
-    </div>
-  `;
-  containerProductos.append(divBusqueda);
 
-let boton = document.getElementById(`boton${item.id}`);
-boton.addEventListener("click", () => {
-agregar(item.id);
-  Swal.fire({
-  text: `Se ha agregado ${item.nombre} al carrito`,
-  icon: "success",
-});
-});
-});
-let carrouselCategorias = document.getElementById("carouselExampleCaptions");
-carrouselCategorias.style.display = "none";
-});
+
 
 
 
