@@ -1,0 +1,218 @@
+[
+    {
+      "id": 1,  
+      "nombre": "Guitarra eléctrica Stratocaster",
+      "categoria": "Guitarras eléctricas",
+      "precio": 356000,
+      "imagen": "./img/guitarraElectrica.jpg",
+      "texto": "No existe guitarra más versátil que la Stratocaster. Clásico sonido que atravieza todos los estilos."
+    },
+    {
+      "id": 2,  
+      "nombre": "Guitarra eléctrica Les Paul",
+      "categoria": "Guitarras eléctricas",
+      "precio": 380000,
+      "imagen": "./img/LesPaul.jpeg",
+      "texto": "Guitarra rockera por excelencia. Demoledora, pesada. Si te gustan los sonidos densos, no lo dudes."
+    },
+    {
+      "id": 3,  
+      "nombre": "Guitarra eléctrica Telecaster",
+      "categoria": "Guitarras eléctricas",
+      "precio": 365000,
+      "imagen": "./img/Telecaster.jpeg",
+      "texto": "La primer guitarra eléctrica de la historia. No podes no probarla."
+    },
+    {
+      "id": 4,  
+      "nombre": "Guitarra eléctrica Semihueca",
+      "categoria": "Guitarras eléctricas",
+      "precio": 390000,
+      "imagen": "./img/semihueca.jpeg",
+      "texto": "De Lennon al Jazz. Solo apta para los que saben."
+    },
+    {
+      "id": 5,  
+      "nombre": "Guitarra eléctrica SG",
+      "categoria": "Guitarras eléctricas",
+      "precio": 325000,
+      "imagen": "./img/SG.jpeg",
+      "texto": "Liviana, versátil, rockera. Tu mejor primera guitarra eléctrica."
+    },
+    {
+      "id": 6,  
+      "nombre": "Guitarra clásica",
+      "categoria": "Guitarras criolla",
+      "precio": 260000,
+      "imagen": "./img/guitarraCriolla.jpg",
+      "texto": "Clásica guitarra española sin corte."
+    },
+    {
+      "id": 7,  
+      "nombre": "Guitarra clásica con corte",
+      "categoria": "Guitarras criolla",
+      "precio": 265000,
+      "imagen": "./img/CriollaCorte.jpeg",
+      "texto": "Si sos de los que les gusta tocar agudo, esta es tu guitarra española."
+    },
+    {
+      "id": 8,  
+      "nombre": "Guitarra electrocriolla sin corte",
+      "categoria": "Guitarras criolla",
+      "precio": 275000,
+      "imagen": "./img/ElectroCriolla.jpeg",
+      "texto": "Clásica opción para poder tocar en público de manera amplificada."
+    },
+    {
+      "id": 9,  
+      "nombre": "Guitarra electrocriolla con corte",
+      "categoria": "Guitarras criolla",
+      "precio": 277000,
+      "imagen": "./img/electroCriollaCorte.jpeg",
+      "texto": "Si además de tocar agudo te gusta tocar en público, entonces es esta tu opción."
+    },
+    {
+      "id": 10,  
+      "nombre": "Guitarra acústica sin corte",
+      "categoria": "Guitarras acústica",
+      "precio": 280000,
+      "imagen": "./img/guitarraAcustica.jpg",
+      "texto": "El sonido del sur de los Estados Unidos en una guitarra."
+    },
+    {
+      "id": 11,  
+      "nombre": "Guitarra acústica con corte",
+      "categoria": "Guitarras acústica",
+      "precio": 280000,
+      "imagen": "./img/AcusticaCorte.jpeg",
+      "texto": "Los punteos más agudos nunca fueron tan fáciles."
+    },
+    {
+      "id": 12,  
+      "nombre": "Guitarra electroacústica con corte",
+      "categoria": "Guitarras acústica",
+      "precio": 305000,
+      "imagen": "./img/ElectroAcusticaCorte.jpeg",
+      "texto": "Ahora tus vecinos van a poder escuchar esos punteos agudos."
+    },
+    {
+      "id": 13,  
+      "nombre": "Guitarra electroacústica sin corte",
+      "categoria": "Guitarras acústica",
+      "precio": 300000,
+      "imagen": "./img/ElectroAcustica.jpeg",
+      "texto": "Te vas a hacer adicto a tocar esta guitarra en volumen alto."
+    },
+    {
+      "id": 14,  
+      "nombre": "Bajo eléctrico fretless",
+      "categoria": "Bajos eléctrico",
+      "precio": 385000,
+      "imagen": "./img/Fretless.jpeg",
+      "texto": "Modelo sin trastes. Jaco Pastorius, te suena?"
+    },
+    {
+      "id": 15,  
+      "nombre": "Bajo eléctrico precission",
+      "categoria": "Bajos eléctrico",
+      "precio": 360000,
+      "imagen": "./img/PrecissionBass.jpeg",
+      "texto": "Clásico sonido del rock. Directo, sin vueltas. Como te gusta."
+    },
+    {
+      "id": 16,  
+      "nombre": "Bajo eléctrico jazz bass",
+      "categoria": "Bajos eléctrico",
+      "precio": 365000,
+      "imagen": "./img/JazzBass.jpeg",
+      "texto": "Si te gustan los bajos melódicos, es tu bajo."
+    },
+    {
+      "id": 17,  
+      "nombre": "Bajo eléctrico activo",
+      "categoria": "Bajos eléctrico",
+      "precio": 390000,
+      "imagen": "./img/ActiveBass.jpeg",
+      "texto": "Para los que buscan una vuelta más en el sonido."
+    },
+    {
+      "id": 18,  
+      "nombre": "Micrófono Condenser standard",
+      "categoria": "Micrófonos",
+      "precio": 120000,
+      "imagen": "./img/condenserEcon.jpeg",
+      "texto": "Micrófono de ambiente standard."
+    },
+    {
+      "id": 19,  
+      "nombre": "Micrófono Condenser Deluxe",
+      "categoria": "Micrófonos",
+      "precio": 250000,
+      "imagen": "./img/CondernserPro.jpeg",
+      "texto": "La definición de este micrófono es mejor que un tiro libre de Messi."
+    },
+    {
+      "id": 20,  
+      "nombre": "Micrófono dinámico",
+      "categoria": "Micrófonos",
+      "precio": 80000,
+      "imagen": "./img/DinamicoEco.jpeg",
+      "texto": "Clásico micrófono para shows"
+    },
+    {
+      "id": 21,  
+      "nombre": "Micrófono Dinámico Pro",
+      "categoria": "Micrófonos",
+      "precio": 215000,
+      "imagen": "./img/DinamicoPro.jpeg",
+      "texto": "Te garantizamos que en vivo tu voz suene como Freddy Mercury. Sino, te devolvemos el dinero."
+    },
+    {
+      "id": 22,  
+      "nombre": "Batería novatos",
+      "categoria": "Baterias",
+      "precio": 185000,
+      "imagen": "./img/BateriaEco.jpeg",
+      "texto": "Pensando en aprender a tocar la bateria? Animate, arruinale la vida a tus vecinos!"
+    },
+    {
+      "id": 23,  
+      "nombre": "Batería profesionales",
+      "categoria": "Baterias",
+      "precio": 450000,
+      "imagen": "./img/BateriaPro.jpeg",
+      "texto": "A veces es necesario dar un salto de calidad. No te vas a arrepentir."
+    },
+    {
+      "id": 24,  
+      "nombre": "Órgano",
+      "categoria": "Teclados",
+      "precio": 80000,
+      "imagen": "./img/Organo.jpeg",
+      "texto": "Clásico órgano que tiene más sonidos que los que vas a poder tocar en tu vida."
+    },
+    {
+      "id": 25,  
+      "nombre": "Piano eléctrico",
+      "categoria": "Teclados",
+      "precio": 450000,
+      "imagen": "./img/PianoElectrico.jpeg",
+      "texto": "Ahora si te podes llamar pianista."
+    },
+    {
+      "id": 26,  
+      "nombre": "Teclado midi",
+      "categoria": "Teclados",
+      "precio": 245000,
+      "imagen": "./img/ControladorMidi.jpeg",
+      "texto": "Si sos productor, no te puede faltar."
+    },
+    {
+      "id": 27,  
+      "nombre": "Sintetizador 2 octavas",
+      "categoria": "Teclados",
+      "precio": 185000,
+      "imagen": "./img/Sint.jpeg",
+      "texto": "Es el que te falta."
+    }
+  ]
