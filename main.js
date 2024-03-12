@@ -32,7 +32,7 @@ categorias.forEach((categoria) => {
         <h5 class="card-title" >${item.nombre}</h5>
         <p class="card-text" >$${item.precio}</p>
         <p class="card-text" >${item.texto}</p>
-        <button type="button" class="btn btn-danger" id="boton${item.id}">Comprar</button>
+        <button type="button" class="btn btn-danger btn-buscar" id="boton${item.id}">Comprar</button>
         </div>
         </div>
         `;
@@ -80,6 +80,47 @@ const agregar = (id) => {
     }
     let search = document.getElementById("search");
     let botonSearch = document.getElementById("botonSearch");
+    search.addEventListener("input", () => {
+      event.preventDefault();
+      if (search.value === "") {
+        window.location.reload(); 
+        return;
+    }
+    let resultadoBusqueda = productos.filter((el) =>
+    normalize(el.nombre.toLowerCase()).includes(normalize(search.value.toLowerCase()))
+    );
+    containerProductos.innerHTML = "";
+    containerProductos.classList.add(`row`);
+    containerProductos.style.justifyContent = "center";
+    resultadoBusqueda.forEach((item) => {
+      let divBusqueda = document.createElement("div");
+      divBusqueda.classList.add(`col-lg-4`);
+      divBusqueda.innerHTML = `
+        <div class="card" style="margin-top: 2rem; margin-bottom: 2rem;"> 
+          <img src="${item.imagen}" class="card-img-top" alt="${item.nombre}">
+          <div class="card-body">
+            <h5 class="card-title">${item.nombre}</h5>
+            <p class="card-text">$${item.precio}</p>
+            <p class="card-text">${item.texto}</p>
+            <button type="button" class="btn btn-danger btn-buscar" id="boton${item.id}">Comprar</button>
+          </div>
+        </div>
+      `;
+      containerProductos.append(divBusqueda);
+    
+    let boton = document.getElementById(`boton${item.id}`);
+    boton.addEventListener("click", () => {
+    agregar(item.id);
+      Swal.fire({
+      text: `Se ha agregado ${item.nombre} al carrito`,
+      icon: "success",
+    });
+    });
+    });
+    let carrouselCategorias = document.getElementById("carouselExampleCaptions");
+    carrouselCategorias.style.display = "none";
+    })
+
     botonSearch.addEventListener("click", () => {
     event.preventDefault();
     let resultadoBusqueda = productos.filter((el) =>
@@ -181,25 +222,25 @@ carrito.forEach((producto) => {
   totalCarrito += precioTotal; 
 
   divCarrito.innerHTML += `
-    <table class="table table-striped" id="tablaCarrito">
+    <table class="table table-striped" id="tablaCarrito" style="width: 70%; margin: 0 auto">
       <tbody>
         <tr>
           <th scope="row">Producto: ${producto.nombre}</th>
-          <td>Precio unitario: $${producto.precio}</td>
-          <td>Cantidad: ${producto.cantidad}</td>
-          <td>Precio total: $${precioTotal}</td>
-          <td><button id="restar${producto.id}" onclick="restarProducto(${producto.id})">-</button></td>
-          <td><button id="sumar${producto.id}" onclick="sumarProducto(${producto.id})">+</button></td>
+          <td style="width: 20%;">Precio unitario: $${producto.precio}</td>
+          <td style="width: 12%;">Cantidad: ${producto.cantidad}</td>
+          <td style="width: 12%;">Precio total: $${precioTotal}</td>
+          <td style="width: 5%;"><button id="restar${producto.id}" onclick="restarProducto(${producto.id})">-</button></td>
+          <td style="width: 5%;"><button id="sumar${producto.id}" onclick="sumarProducto(${producto.id})">+</button></td>
         </tr>
       </tbody>
     </table>`;
 });
 
 divCarrito.innerHTML += `
-  <table class="table table-striped">
+  <table class="table table-striped" style="width: 70%; margin: 0 auto; margin-bottom: 10px;">
     <tbody>
       <tr>
-        <th scope="row">Precio total del carrito: $${totalCarrito}</th>
+        <th scope="row" style="text-align: center;">Precio total del carrito: $${totalCarrito}</th>
         <td><button id="vaciarCarrito" onclick="vaciarCarrito()">Vaciar carrito</button></td>
       </tr>
     </tbody>
@@ -209,6 +250,8 @@ containerCarrito.append(divCarrito);
 
 };
 
+carrito = JSON.parse(sessionStorage.getItem("carrito")) || [];
+mostrarCarrito();
 
 
 

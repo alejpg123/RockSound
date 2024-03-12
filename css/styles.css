@@ -129,3 +129,10 @@ p {
 .colorComprar{
   background-color: #E2D58B;
 }
+
+.btn-buscar {
+  position: absolute; 
+  bottom: 10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
