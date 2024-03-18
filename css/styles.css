@@ -108,16 +108,20 @@ p {
 
 .card {
   opacity: 90%;
+  height: 550px;
+  box-shadow: 0px 1px 10px gray;
+  cursor: default;
+  transition: all 400ms ease;
+}
+.card:hover{
+  box-shadow: 5px 5px 20px white;
+  transform: translateY(-3%);
 }
 
 .tituloCarrousel{
   color: #E2D58B;
   font-size: 2rem;
   text-shadow: 1px 1px 5px gray;
-}
-
-.card {
-  height: 550px;
 }
 
 .card-img-top {
