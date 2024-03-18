@@ -43,6 +43,9 @@
     padding-left: 0px;
     padding-right: 0px;
   }
+  #botonSearch{
+    display: none;
+  }
 }
 
 .btn-outline-success{
