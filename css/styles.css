@@ -1,3 +1,6 @@
+.navbar{
+  background-color: #2C313A !important;
+}
 .logo {
   width: 80px;
   height: 80px;
@@ -21,7 +24,7 @@
 
 @media (max-width: 720px) {
   .form-control {
-    width: 80%; 
+    width: 40%; 
     max-width: 200px; 
   }
   .logo {
@@ -37,15 +40,10 @@
   }
 }
 
-
-
 .btn-outline-success{
   height: 4rem;
   color: antiquewhite;
   border-color: antiquewhite;
-}
-.navbar{
-  background-color: #2C313A !important;
 }
 
 body{
